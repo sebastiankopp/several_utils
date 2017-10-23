@@ -7,7 +7,7 @@ do
 		update-alternatives --install /usr/bin/$i $i $JAVA_HOME/bin/$i 1
 		update-alternatives --set $i $JAVA_HOME/bin/$i
 	else
-		>&2 echo "Die Datei $JAVA_HOME/bin/$i existiert nicht!"
+		>&2 echo "The file $JAVA_HOME/bin/$i does not exist!"
 	fi
 done
 
