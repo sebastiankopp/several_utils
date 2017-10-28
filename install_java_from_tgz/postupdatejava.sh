@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for i in  jar jarsigner java javac javadoc jaotc javapackager javaws jcmd jconsole jcontrol jdb jdeprscan jdeps jhsdb jimage jinfo jjs jlink jmap jmc jmod jps jrunscript jshell jstack jstat jstatd jweblauncher keytool pack200 policytool schemagen unpack200 wsgen wsimport xjc
+for i in `ls $JAVA_HOME/bin | tr '\n' ' '`
 do
 	if [ -f $JAVA_HOME/bin/$i ]
 	then
