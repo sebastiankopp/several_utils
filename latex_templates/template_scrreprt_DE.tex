@@ -1,0 +1,47 @@
+\documentclass[a4paper,10pt]{scrreprt}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{lmodern}
+\usepackage{mathpazo}
+\usepackage{color}
+\usepackage[ngerman]{babel}
+\sloppy
+\usepackage{microtype}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\title{Titel}
+\author{Autor}
+\newcommand{\inlinecode}[1]{\textbf{\texttt{#1}}}
+\newcommand{\genericbrackets}[1]{\textless \mbox{#1}\textgreater}
+\begin{document}
+
+\definecolor{grey}{RGB}{80,80,80}
+\definecolor{green}{RGB}{0,255,0}
+\definecolor{blue}{RGB}{0,0,255}
+\lstset{
+	language=Java,
+	commentstyle=\color{green},
+	keywordstyle=\color{blue},
+	numbers=left,
+	numberstyle=\tiny ,
+	breaklines=true,
+	breakatwhitespace=true,
+	frame=single,
+	basicstyle=\ttfamily ,
+	stepnumber=1,
+	stringstyle=\color{grey},
+	tabsize=4
+}
+\maketitle
+%\begin{abstract}
+%Abstract
+%\end{abstract}
+\tableofcontents
+\chapter{Einführung}
+
+
+\end{document}
