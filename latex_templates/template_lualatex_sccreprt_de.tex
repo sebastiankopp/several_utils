@@ -1,21 +1,27 @@
 \documentclass[a4paper,10pt]{scrreprt}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+\usepackage{fontspec}
 \usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
-\usepackage{lmodern}
-\usepackage{mathpazo}
+\usepackage{unicode-math}
+\setromanfont{Constantia} % or Liberation Serif
+\setsansfont{Latin Modern Sans}
+\setmonofont{Consolas} % or Ubuntu Mono
+\setmathfont{Cambria Math} % or Latin Modern Math
 \usepackage{xcolor}
 \usepackage{nameref}
 \usepackage[ngerman]{babel}
 \usepackage{microtype} % add expansion option (stretch/shrink) if necessary
 \usepackage{listings}
-\usepackage{mathtools}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage[hidelinks]{hyperref}
 \usepackage{caption}
 \title{Titel}
 \author{Autor}
+\hypersetup{
+	pdfencoding=auto,
+	pdfauthor=\@author,
+	pdftitle=\@title,
+}
 \newcommand{\inlinecode}[1]{\textbf{\texttt{#1}}}
 \newcommand{\genericbrackets}[1]{\textless \mbox{#1}\textgreater}
 \begin{document}
@@ -43,6 +49,4 @@
 %\end{abstract}
 \tableofcontents
 \chapter{Einführung}
-
-
 \end{document}
