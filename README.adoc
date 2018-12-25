@@ -1,5 +1,5 @@
 = Miscellaneous Utils
-This repo contains severla utils, e. g. for Linux
+This repo contains several utils, e. g. for Linux
 
 == ZeroOneBooleanAdapter
 When using cxf-wsdl2java, the *source* file `ZeroOneBooleanAdapter.java` might be missing in the classpath. The contained script provides a quick fix when using maven.
