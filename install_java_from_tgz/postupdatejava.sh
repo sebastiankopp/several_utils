@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "JAVA_HOME is currently set to $JAVA_HOME"
+
 for i in `ls $JAVA_HOME/bin | tr '\n' ' '`
 do
 	if [ -x $JAVA_HOME/bin/$i ]

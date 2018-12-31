@@ -23,4 +23,5 @@ Just execute the attached script and add the following dependency to the cxf plu
 </plugin>
 ----
 
-==
+== Installing Java from tgz archives (`install_java_from_tgz`)
+Contains a short manual describing the required steps for installing java from a tgz archive as well as switching between already installed java runtimes (and JDKs).

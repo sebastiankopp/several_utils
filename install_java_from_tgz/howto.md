@@ -10,3 +10,5 @@
 6. Check if at least `java` has the correct version
 
    `java -version`
+
+NOTE: The postupdatejava.sh script is also suitable for switching between already installed java runtimes, e. g. for different versions. In order to switch, just perform the steps 2 to 6 
