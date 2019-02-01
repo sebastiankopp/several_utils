@@ -7,7 +7,7 @@ SAVE_DIR=topkg/com/sun/tools/xjc/runtime/
 mkdir -p ${SAVE_DIR}
 CURR_WORKDIR=`pwd`
 cd ${SAVE_DIR}
-curl -sOL https://github.com/eclipse-ee4j/jaxb-ri/blob/master/jaxb-ri/xjc/src/main/java/com/sun/tools/xjc/runtime/ZeroOneBooleanAdapter.java 
+curl -sOL https://raw.githubusercontent.com/eclipse-ee4j/jaxb-ri/master/jaxb-ri/xjc/src/main/java/com/sun/tools/xjc/runtime/ZeroOneBooleanAdapter.java
 
 cd ${CURR_WORKDIR}
 
