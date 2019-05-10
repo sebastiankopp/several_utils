@@ -7,7 +7,7 @@ Just execute the attached script and add the following dependency to the cxf plu
 [source,xml]
 ----
 <plugin>
-	<groupId>org.apache.cxf>
+	<groupId>org.apache.cxf</groupId>
 	<artifactId>cxf-codegen-plugin</artifactId>
 	...
 	<executions>
