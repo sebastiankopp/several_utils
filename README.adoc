@@ -25,3 +25,10 @@ Just execute the attached script and add the following dependency to the cxf plu
 
 == Installing Java from tgz archives (`install_java_from_tgz`)
 Contains a short manual describing the required steps for installing java from a tgz archive as well as switching between already installed java runtimes (and JDKs).
+
+== Watching and executing simple makefiles (`watch_and_execute`)
+Simple tool for auto-executing makefiles after saving your workfile (it is intended to be used for rather small builds (especially LaTeX od AsciiDoc) than giant projects...)
+
+Simple compile the java file using `javac`, then execute it!
+
+NOTE: You have to use at least Java 9
