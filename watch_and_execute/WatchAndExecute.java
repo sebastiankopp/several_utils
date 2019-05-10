@@ -63,10 +63,10 @@ class WatchAndExecute {
 			process.waitFor(20, TimeUnit.SECONDS);
 			final int exitValue = process.exitValue();
 			if (exitValue != 0) {
-				System.err.println("Fehler beim Ausführen von Make aufgetreten!");
+				System.err.println("Error occured while executing make!");
 			}
 		} catch (IOException | InterruptedException e) {
-			throw new IllegalStateException("Schwerwiegender Fehler beim Auführen von make aufgetreten.", e);
+			throw new IllegalStateException("Caught severe error while trying to execute make.", e);
 		}
 	}
 	
