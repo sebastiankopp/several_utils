@@ -1,0 +1,18 @@
+MAIN_NAME=seminararbeit
+
+APP=pdflatex -interaction=nonstopmode
+
+BIBLIOGRAPHY=bibliography.bib
+
+CHAPTERS=$(shell find chapters/ -type f -name '*.tex')
+
+ASSETS=$(shell find assets/ -regextype posix-egrep -iregex '.+\.(java|png|jpg)$' -type f )
+
+$(MAIN_NAME).pdf: $(MAIN_NAME).tex $(CHAPTERS) $(BIBLIOGRAPHY)
+	$(APP) $(MAIN_NAME).tex
+	biber ${MAIN_NAME}.bcf
+	$(APP) $(MAIN_NAME).tex
+	$(APP) $(MAIN_NAME).tex
+
+clean:
+	rm -f *.pdf *.toc *.aux *.synctex.gz chapters/*.aux *.blg *.bcf *.bbl *.run.xml *.log *.out
