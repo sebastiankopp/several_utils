@@ -8,7 +8,7 @@ CHAPTERS=$(shell find chapters/ -type f -name '*.tex')
 
 ASSETS=$(shell find assets/ -regextype posix-egrep -iregex '.+\.(java|png|jpg)$' -type f )
 
-$(MAIN_NAME).pdf: $(MAIN_NAME).tex $(CHAPTERS) $(BIBLIOGRAPHY)
+$(MAIN_NAME).pdf: $(MAIN_NAME).tex $(CHAPTERS) $(BIBLIOGRAPHY) $(ASSETS)
 	$(APP) $(MAIN_NAME).tex
 	biber ${MAIN_NAME}.bcf
 	$(APP) $(MAIN_NAME).tex
