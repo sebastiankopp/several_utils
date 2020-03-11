@@ -32,3 +32,10 @@ Simple tool for auto-executing makefiles after saving your workfile (it is inten
 Simple compile the java file using `javac`, then execute it!
 
 NOTE: You have to use at least Java 9
+
+== LaTeX templates
+
+* Several templates, e. g. for academic work (including suitable makefiles). The templates are all optimized for German language.
+** Beamer template for producing a pdf for presenting as well as a handaout at once including a suitable makefile
+** Templates for the `scrreprt` class using pdfTeX and LuaTeX
+** A makefile for academic work (includes inserting a bibliography)

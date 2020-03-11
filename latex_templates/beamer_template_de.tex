@@ -1,4 +1,8 @@
-\documentclass[12pt]{beamer}
+\ifdefined\deskopphandoutenabled
+	\PassOptionsToClass{handout}{beamer} 
+\fi
+
+\documentclass[12pt,aspectratio=169]{beamer}
 \usetheme{Pittsburgh}
 \usecolortheme{dove}
 \usepackage[utf8]{inputenc}
@@ -15,10 +19,29 @@
 \setbeamertemplate{}{} 
 %\logo{} 
 %\institute{} 
-%\date{} 
+\date{} 
 %\subject{} 
+\newcommand{\inlinecode}[1]{\texttt{#1}}
+\newcommand{\genericbrackets}[1]{\textless \mbox{#1}\textgreater}
+\newcommand{\Pfeil}{\ensuremath{\Rightarrow}}
 \begin{document}
-
+\definecolor{grey}{RGB}{80,80,80}
+\definecolor{green}{RGB}{14,157,13}
+\definecolor{blue}{RGB}{0,0,255}
+\lstset{
+	language=Java,
+	commentstyle=\color{green},
+	keywordstyle=\color{blue},
+%	numbers=left,
+%	numberstyle=\tiny ,
+	breaklines=true,
+	breakatwhitespace=true,
+%	frame=single,
+	basicstyle=\ttfamily \small,
+	stepnumber=1,
+	stringstyle=\color{grey},
+	tabsize=4
+}
 \begin{frame}
 \titlepage
 \end{frame}
@@ -26,19 +49,15 @@
 %\begin{frame}
 %\tableofcontents
 %\end{frame}
-
-\begin{frame}{Title of Slide 1}
-\begin{itemize}
-\item Item 1	\pause
-\item Item 2	\pause
-\end{itemize}	\pause
-\( \Rightarrow \)  Conclusion
+\begin{frame}{First Frame}
+Content \dots
 \end{frame}
 
-\begin{frame}{Title of Slide 2}
+
+\begin{frame}{Some Items}
 \begin{itemize}
-\item Item 1	\pause
-\item Item 2	\pause
+\item Item 1
+\item Item 2
 \end{itemize}
 \end{frame}
 
@@ -48,4 +67,5 @@
 Vielen Dank für Ihre Aufmerksamkeit!
 \end{Huge}
 \end{center}
-\end{frame}\end{document}
+\end{frame}
+\end{document}
