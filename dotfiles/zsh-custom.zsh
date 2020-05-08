@@ -11,3 +11,4 @@ function xopen() {
 		xdg-open $i
 	done
 }
+alias md='mkdir -p'
