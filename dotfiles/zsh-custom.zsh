@@ -12,3 +12,4 @@ function xopen() {
 	done
 }
 alias md='mkdir -p'
+alias clip='xclip -selection c'
