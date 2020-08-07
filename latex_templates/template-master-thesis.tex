@@ -1,0 +1,89 @@
+\documentclass[a4paper,11pt,bibliography=totoc]{scrreprt} % listof=totoc
+\usepackage{fontspec}
+\usepackage[left=2.8cm,right=2.5cm,top=3cm,bottom=3cm]{geometry} % links Spielraum zwischen 2.5 und 3.0 -- je nach Umfang des Inhalts
+\usepackage{unicode-math}
+\setromanfont[Ligatures=TeX]{Pali}
+\setsansfont{Latin Modern Sans}
+\setmonofont{Latin Modern Mono}
+\setmathfont{Latin Modern Math}
+\usepackage{xcolor}
+\usepackage{nameref}
+\usepackage[ngerman]{babel}
+\usepackage{microtype} % add expansion option (stretch/shrink) if necessary
+\usepackage{selnolig}
+\nolig{ii}{i|i} %% langer Strich über i bei 'instantiieren' stört
+\nolig{aa}{a|a}
+\usepackage[all]{nowidow}
+\usepackage{listings}
+%\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage{url}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{bibliography.bib}
+\usepackage[hidelinks, pdfusetitle, unicode]{hyperref}
+\usepackage{caption}
+\title{Title of this thesis}
+\subtitle{Subtitle of this thesis}
+\author{Author}
+\newcommand{\inlinecode}[1]{\texttt{#1}}
+\newcommand{\genericbrackets}[1]{\textless \mbox{#1}\textgreater}
+\renewcommand{\lstlistlistingname}{Quelltextverzeichnis}
+
+\renewcommand{\baselinestretch}{1.15} 
+\setkomafont{section}{\LARGE}
+\setkomafont{subsection}{\Large}
+\setkomafont{subsubsection}{\large}
+\setkomafont{paragraph}{\large}
+\setkomafont{subparagraph}{\large}
+
+% Große LaTeX-Todsünde - kähähähäh
+\sloppy
+\begin{document}
+
+\definecolor{grey}{RGB}{60,60,60}
+\definecolor{green}{RGB}{17,109,34}
+\definecolor{blue}{RGB}{0,0,155}
+\lstset{
+	language=Java,
+	commentstyle=\color{green},
+	keywordstyle=\color{blue},
+	numbers=left,
+	numberstyle=\tiny ,
+	breaklines=true,
+	breakatwhitespace=true,
+	frame=single,
+	basicstyle=\ttfamily \small,
+	stepnumber=1,
+	stringstyle=\color{grey},
+	tabsize=4,
+	showstringspaces=false
+}
+\begin{titlepage}
+\maketitle
+\vspace{10cm}
+\begin{tabbing}
+xxxxxxxxxxxxxxx: \= xxxxxxxxxxxxxxxx \kill %% Musterzeile zur Definition des Tabulators, durch Kill-Befehl wieder entfernt
+First entry:    \> Value \\
+Second entry:   \> Another value \\
+\end{tabbing}
+\end{titlepage}
+
+\addchap{Kurzzusammenfassung}
+% Abstract
+
+\tableofcontents
+\clearpage
+% \listoftables
+\lstlistoflistings
+% \listoffigures
+
+\include{chapters/einfuehrung}
+
+\clearpage
+\printbibliography
+
+\appendix
+\include{chapters/appx_code}
+
+\end{document}
