@@ -39,3 +39,9 @@ NOTE: You have to use at least Java 9
 ** Beamer template for producing a pdf for presenting as well as a handaout at once including a suitable makefile
 ** Templates for the `scrreprt` class using pdfTeX and LuaTeX
 ** A makefile for academic work (includes inserting a bibliography)
+
+== Docker
+
+Some simple Dockerfiles for 
+
+* H2 databases (Debian-based)
