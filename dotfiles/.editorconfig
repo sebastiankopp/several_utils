@@ -1,0 +1,18 @@
+root = true
+
+[*]
+end_of_line = lf
+indent_style = space
+indent_size = 4
+
+# [*.{java,xml,sh}]
+
+[*.{yaml,yml}]
+indent_size = 2
+
+[*.{cmd,bat}]
+end_of_line = crlf
+
+[Makefile,*.mk]
+indent_style = tab
+tab_size = 4
